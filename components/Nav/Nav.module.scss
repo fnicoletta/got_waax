@@ -1,0 +1,42 @@
+@import "../../styles/colors";
+.container {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(4deg, $black, $dark_grey);
+  color: white;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navList {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+
+  li {
+    font-size: 1.2rem;
+    border-bottom: 5px solid transparent;
+    transition: 0.2s;
+    &:hover {
+      color: $red;
+      border-bottom: 5px solid $red;
+      cursor: pointer;
+    }
+  }
+}
+
+.imgContainer {
+  margin-left: 15px;
+  img {
+    max-height: 75px;
+  }
+}
