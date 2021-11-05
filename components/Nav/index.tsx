@@ -1,8 +1,14 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import styles from "./Nav.module.scss";
+import Image from 'next/image';
+import React, { useState } from 'react';
+import styles from './Nav.module.scss';
+import Link from 'next/link';
 
-const navItems = ["Home", "About", "Products", "Contact"];
+const navItems = [
+  { name: 'Home', link: '/' },
+  { name: 'About', link: '/about' },
+  { name: 'Products', link: '/products' },
+  { name: 'Contact', link: '/contact' },
+];
 
 const Nav: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +34,9 @@ const Nav: React.FC = () => {
       <div className={isMenuOpen ? styles.openMenu : styles.closeMenu}>
         <ul className={styles.navList}>
           {navItems.map((item) => (
-            <li key={item}>{item}</li>
+            <Link key={item.name} href={item.link as string}>
+              <li>{item.name}</li>
+            </Link>
           ))}
         </ul>
       </div>
