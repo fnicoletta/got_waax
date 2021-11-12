@@ -25,6 +25,7 @@ const Nav: React.FC = () => {
           height="150"
         />
       </div>
+
       <ul className={styles.hamburger} onClick={handleOpenNav}>
         <li className={styles.line}></li>
         <li className={styles.line}></li>

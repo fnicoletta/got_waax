@@ -1,0 +1,43 @@
+@import '../../styles/colors';
+
+.horizontalCard {
+  margin: 1rem 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: #121212;
+  color: white;
+  border-radius: 10px;
+  line-height: 1.5rem;
+  text-align: justify;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.btnRed {
+  margin: 10px auto;
+  background-color: $red;
+  padding: 10px 55px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: max-content;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1000px) {
+  .horizontalCard {
+    flex-direction: row;
+
+    .textContainer {
+      margin-right: 2rem;
+    }
+  }
+}

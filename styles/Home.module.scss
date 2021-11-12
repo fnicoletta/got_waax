@@ -1,8 +1,13 @@
-@import "colors";
+@import 'colors';
+@import 'mixins';
 .main {
   width: 100%;
-  margin-top: 100px;
+  background-color: black;
 }
 
-.imageContainer {
+.cardSection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
 }

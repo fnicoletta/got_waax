@@ -1,6 +1,7 @@
 import Nav from '../components/Nav';
 import styles from '../styles/Contact.module.scss';
 import Image from 'next/image';
+import ImgHeader from '../components/ImgHeader';
 
 export interface IProps {}
 
@@ -8,10 +9,7 @@ const Contact: React.FC<IProps> = (props) => {
   return (
     <div className={styles.container}>
       <Nav />
-      <div className={styles.imgContainer}></div>
-      <header className={styles.header}>
-        <h1>Contact Form</h1>
-      </header>
+      <ImgHeader overlay="Contact" imgUrl="/static/ferrari_garage.jpg" />
       <main className={styles.main}>
         <div className={styles.formDescription}>
           <h1>Lorem Ipsum!</h1>
